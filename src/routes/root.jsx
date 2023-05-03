@@ -3,9 +3,13 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
+// import { ui, uiConfig } from "../index";
+// ui.start("#firebaseui-auth-container", uiConfig);
+
 export default function Root() {
   return (
     <>
+      <div id="firebaseui-auth-container"></div>
       <Navbar bg="light" expand="lg">
         <Container>
           <Navbar.Brand href="#home">Trusty Trade</Navbar.Brand>

@@ -10,6 +10,61 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Root from './routes/root';
 
+// ----
+// Firebase Setup 
+// Import the functions you need from the SDKs you need
+// import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+import firebaseConfigObj from './firebaseConfig';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+import "firebase/compat/analytics";
+
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = firebaseConfigObj;
+
+// Initialize Firebase
+export const app = firebase.initializeApp(firebaseConfig);
+export const analytics = firebase.analytics(app);
+
+// ----
+
+// export const firebase = require('firebase');
+// const firebaseui = require('firebaseui');
+// export const ui = new firebaseui.auth.AuthUI(firebase.auth());
+// export const uiConfig = {
+//   callbacks: {
+//     signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+//       // User successfully signed in.
+//       // Return type determines whether we continue the redirect automatically
+//       // or whether we leave that to developer to handle.
+//       return true;
+//     },
+//     uiShown: function() {
+//       // The widget is rendered.
+//       // Hide the loader.
+//       document.getElementById('loader').style.display = 'none';
+//     }
+//   },
+//   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+//   signInFlow: 'popup',
+//   signInSuccessUrl: '<url-to-redirect-to-on-success>',
+//   signInOptions: [
+//     // Leave the lines as is for the providers you want to offer your users.
+//     firebase.auth.EmailAuthProvider.PROVIDER_ID,
+//   ],
+//   // Terms of service url.
+//   tosUrl: '<your-tos-url>',
+//   // Privacy policy url.
+//   privacyPolicyUrl: '<your-privacy-policy-url>'
+// };
+
 const router = createBrowserRouter([
   {
     path: "/",
