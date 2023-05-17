@@ -2,9 +2,25 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 // import Image from "react-bootstrap/Image";
 
 export default function Home() {
+  const services = [
+    {
+      img: "",
+      text: "Furniture Assembly",
+    },
+    {
+      img: "",
+      text: "Landscaping",
+    },
+    {
+      img: "",
+      text: "3",
+    },
+  ];
+
   return (
     <>
       <Container>
@@ -91,6 +107,34 @@ export default function Home() {
               </Button>{" "}
             </div>
           </Col>
+        </Row>
+        <Row style={{ margin: "16px 0" }}>
+          <Col>
+            <div
+              className="text-title"
+              style={{ textAlign: "center", fontSize: "2vw" }}
+            >
+              Services Near Me
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          {services.map((el) => (
+            <Col>
+              <Card style={{ width: "18rem" }}>
+                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </Card.Text>
+                  <Button variant="primary">Go somewhere</Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+          <Col></Col>
         </Row>
       </Container>
     </>
