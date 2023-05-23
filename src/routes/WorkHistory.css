@@ -1,0 +1,27 @@
+.custom-card {
+    background-color: #ececec;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-card .card-title {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .custom-card ul.list-group {
+    margin-bottom: 0;
+  }
+  
+  .custom-card .card-footer {
+    background-color: #ececec;
+    border-top: none;
+    text-align: center;
+  }
+  
+  .custom-card .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  

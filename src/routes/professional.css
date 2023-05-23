@@ -55,5 +55,8 @@
     font-weight: 500;
   }
   
-  
+  .custom-input {
+    background-color: #ECECEC;
+    border: 1px solid #C0C0C0;
+  }
   
