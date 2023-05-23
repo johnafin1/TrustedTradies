@@ -8,16 +8,28 @@ import Card from "react-bootstrap/Card";
 export default function Home() {
   const services = [
     {
-      img: "",
+      img: "https://www.leatherman.com/on/demandware.static/-/Library-Sites-leatherman-shared2020/default/dw7a20553f/blog/home/diy/7-hacks-for-assembling-furniture/AssemblingFurniture-full.jpg",
       text: "Furniture Assembly",
     },
     {
-      img: "",
+      img: "https://res.akamaized.net/domain/image/fetch/t_web/https://static.domain.com.au/domainblog/uploads/2015/03/18024707/7-landscaping-tips.jpg",
       text: "Landscaping",
     },
     {
-      img: "",
-      text: "3",
+      img: "https://health.clevelandclinic.org/wp-content/uploads/sites/3/2018/11/cleanSick-628306310_770x533-650x428.jpg",
+      text: "Cleaning",
+    },
+    {
+      img: "https://www.gopeople.com.au/wp-content/uploads/2022/03/pexels-rodnae-productions-7363098.jpg",
+      text: "Delivery",
+    },
+    {
+      img: "https://www.aaronmachineshop.com/wp-content/uploads/2022/10/metalfabrication.jpg",
+      text: "Metal Works",
+    },
+    {
+      img: "https://www.rollingstone.com/wp-content/uploads/2021/08/AdobeStock_131179423.jpeg",
+      text: "Pool Cleaning",
     },
   ];
 
@@ -25,7 +37,16 @@ export default function Home() {
     <>
       <Container>
         <Row style={{ margin: "16px 0" }}>
-          <Col>Put rating here ?image vs component</Col>
+          <Col style={{ textAlign: "center" }}>
+            <img
+              src={require("../assets/5_stars.svg.png")}
+              alt="stars"
+              style={{ width: "200px" }}
+            ></img>
+            <div>
+              <span className="text-title">100,000+ Customer Reviews</span>
+            </div>
+          </Col>
           <Col>
             <span className="text-title">
               1,000+ trusted & expert professionals contributing to 100,000+
@@ -118,18 +139,14 @@ export default function Home() {
             </div>
           </Col>
         </Row>
-        <Row>
+        <Row style={{ margin: "16px 0" }}>
           {services.map((el) => (
-            <Col>
+            <Col key={el.img} md={4} style={{ marginTop: "16px" }}>
               <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Img variant="top" src={el.img} />
                 <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
+                  <Card.Title>{el.text}</Card.Title>
+                  <Card.Text>Avg $50 - $120</Card.Text>
                 </Card.Body>
               </Card>
             </Col>

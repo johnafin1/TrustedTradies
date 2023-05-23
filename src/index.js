@@ -7,6 +7,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Root from "./routes/root";
 import Home from "./routes/home";
+import Professional from "./routes/professional";
+import MemberSignup from "./routes/membersignup";
 
 // ----
 // Firebase Setup
@@ -21,7 +23,6 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
 import "firebase/compat/analytics";
-import Professional from "./routes/professional";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -74,7 +75,11 @@ const router = createBrowserRouter([
       },
       {
         path: "login",
-        element: <Professional/>
+        element: <Professional />,
+      },
+      {
+        path: "signup/member",
+        element: <MemberSignup />,
       },
     ],
   },

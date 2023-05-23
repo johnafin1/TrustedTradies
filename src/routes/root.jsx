@@ -4,12 +4,19 @@ import Navbar from "react-bootstrap/Navbar";
 // import NavDropdown from "react-bootstrap/NavDropdown";
 import ThemeProvider from "react-bootstrap/ThemeProvider";
 import Button from "react-bootstrap/Button";
+import { useNavigate } from "react-router-dom";
 
 // import { ui, uiConfig } from "../index";
 // ui.start("#firebaseui-auth-container", uiConfig);
 
 import { Outlet } from "react-router-dom";
+
 export default function Root() {
+  const navigate = useNavigate();
+  function gotoMemberSignup() {
+    navigate("signup/member");
+  }
+
   return (
     <>
       <ThemeProvider
@@ -32,7 +39,7 @@ export default function Root() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse className="justify-content-end">
               <Nav className="me-auto, justify-content-end">
-                <Nav.Link href="home">Home</Nav.Link>
+                <Nav.Link href="/home">Home</Nav.Link>
                 <Nav.Link href="login">Login/Signup</Nav.Link>
                 <Nav.Link href="login">Locations</Nav.Link>
               </Nav>
@@ -40,6 +47,7 @@ export default function Root() {
                 size="sm"
                 variant="outline-success"
                 style={{ marginRight: "8px" }}
+                onClick={gotoMemberSignup}
               >
                 Become a Member
               </Button>{" "}
