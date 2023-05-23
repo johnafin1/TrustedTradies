@@ -13,6 +13,7 @@ export default function SignUp() {
   function gotoLogin() {
     navigate("/login");
   }
+
   return (
     <>
       <Container>
@@ -22,7 +23,7 @@ export default function SignUp() {
               <img src={require("../assets/tt_logo.png")} alt="tt logo" />
             </div>
             <div style={{ textAlign: "center" }} className="mb-5">
-              <span className="text-title">Sign Up</span>
+              <span className="text-title">Professional Registration</span>
             </div>
             <Form>
               <Row>
@@ -42,6 +43,18 @@ export default function SignUp() {
                   <Form.Group className="mb-3" controlId="formBasicText">
                     <Form.Label>Last Name</Form.Label>
                     <Form.Control type="text" placeholder="Enter last name" />
+                  </Form.Group>
+                </Col>
+                <Col md={6}>
+                  <Form.Group className="mb-3" controlId="formBasicText">
+                    <Form.Label>Company Name</Form.Label>
+                    <Form.Control type="text" placeholder="Company Name" />
+                  </Form.Group>
+                </Col>
+                <Col md={6}>
+                  <Form.Group className="mb-3" controlId="formBasicText">
+                    <Form.Label>ABN</Form.Label>
+                    <Form.Control type="text" placeholder="ABN" />
                   </Form.Group>
                 </Col>
                 <Col md={12}>
@@ -78,9 +91,9 @@ export default function SignUp() {
                     <Card.Body>
                       <Card.Title>Become a Member</Card.Title>
                       <Card.Text>
-                        Enjoy unlimited callouts with the Trusty Trade
-                        Membersship Program for only $32.00 per month. Billed
-                        anually.
+                        Enjoy simplicity and predictability with the Trusty
+                        Trade Membership Program. Avoid piecework comission for
+                        just $32.00 per month. Billed anually.
                       </Card.Text>
                     </Card.Body>
                     <Card.Footer className="text-muted">

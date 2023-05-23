@@ -3,9 +3,16 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { useNavigate } from "react-router-dom";
 // import Image from "react-bootstrap/Image";
 
 export default function Home() {
+  const navigate = useNavigate();
+
+  function gotoMemberSignup() {
+    navigate("/signup/member");
+  }
+
   const services = [
     {
       img: "https://www.leatherman.com/on/demandware.static/-/Library-Sites-leatherman-shared2020/default/dw7a20553f/blog/home/diy/7-hacks-for-assembling-furniture/AssemblingFurniture-full.jpg",
@@ -123,7 +130,7 @@ export default function Home() {
                 Get unlimited assistance callouts at your fingertips! Just pay
                 an annual fixed fee - no hidden costs, no worries!
               </p>
-              <Button size="lg" variant="primary">
+              <Button size="lg" variant="primary" onClick={gotoMemberSignup}>
                 Join Now
               </Button>{" "}
             </div>

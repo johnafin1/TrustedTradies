@@ -13,8 +13,13 @@ import { Outlet } from "react-router-dom";
 
 export default function Root() {
   const navigate = useNavigate();
+
   function gotoMemberSignup() {
     navigate("signup/member");
+  }
+
+  function gotoProfessionalSignup() {
+    navigate("signup/professional");
   }
 
   return (
@@ -40,8 +45,7 @@ export default function Root() {
             <Navbar.Collapse className="justify-content-end">
               <Nav className="me-auto, justify-content-end">
                 <Nav.Link href="/home">Home</Nav.Link>
-                <Nav.Link href="login">Login/Signup</Nav.Link>
-                <Nav.Link href="login">Locations</Nav.Link>
+                <Nav.Link href="/login">Login/Signup</Nav.Link>
               </Nav>
               <Button
                 size="sm"
@@ -51,7 +55,11 @@ export default function Root() {
               >
                 Become a Member
               </Button>{" "}
-              <Button size="sm" variant="outline-warning">
+              <Button
+                size="sm"
+                variant="outline-warning"
+                onClick={gotoProfessionalSignup}
+              >
                 Register a Professional
               </Button>{" "}
             </Navbar.Collapse>
