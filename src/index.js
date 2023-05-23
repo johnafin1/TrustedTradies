@@ -7,12 +7,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Root from "./routes/root";
 import Home from "./routes/home";
+import ProfessionalHome from "./routes/professionalhome";
 import Professional from "./routes/professional";
-import MemberSignup from "./routes/membersignup";
-import Login from "./routes/login";
-import ProfessionalSignup from "./routes/professionalsignup";
-import Search from "./routes/search";
-
+import ProfessionalStats from "./routes/professionalstats";
+import ProfessionalHistory from "./routes/professionalhistory";
+import ProfessionalReviews from "./routes/professionalreviews";
+import ProfessionalInbox from "./routes/professionalinbox";
+import ProfessionalSupport from "./routes/professionalsupport";
 // ----
 // Firebase Setup
 // Import the functions you need from the SDKs you need
@@ -77,28 +78,37 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "professional",
-        element: <Professional />,
-      },
-      {
-        path: "signup/member",
-        element: <MemberSignup />,
-      },
-      {
-        path: "signup/professional",
-        element: <ProfessionalSignup />,
-      },
-      {
         path: "login",
-        element: <Login></Login>,
+        element: <ProfessionalHome/>
       },
       {
-        path: "search",
-        element: <Search></Search>,
+        path: "professional",
+        element: <Professional/>
+      },
+      {
+        path: "professionalstats",
+        element: <ProfessionalStats/>
+      },
+      {
+        path: "professionalhistory",
+        element: <ProfessionalHistory/>
+      },
+      {
+        path: "professionalreviews",
+        element: <ProfessionalReviews/>
+      },
+      {
+        path: "professionalinbox",
+        element: <ProfessionalInbox/>
+      },
+      {
+        path: "professionalsupport",
+        element: <ProfessionalSupport/>
       },
     ],
   },
 ]);
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

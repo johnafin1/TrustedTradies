@@ -1,5 +1,6 @@
 import './professional.css';
 import React, { useState } from 'react';
+import ProfessionalPanel from './professionalpanel';
 
 /*
 Tasks to do on this page - 
