@@ -48,8 +48,8 @@ export default function Root() {
                 <Nav.Link href="/home">Home</Nav.Link>
                 <Nav.Link href="/login">Login/Signup</Nav.Link>
                 <Nav.Link href="/search">New Service</Nav.Link>
-                <NavDropdown title="My Accoount">
-                  <NavDropdown.Item href="/professionalhome">
+                <NavDropdown title="My Account">
+                  <NavDropdown.Item href="/userprofile">
                     User
                   </NavDropdown.Item>
                   <NavDropdown.Item href="/professionalhome">

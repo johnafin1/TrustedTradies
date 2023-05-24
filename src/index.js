@@ -19,7 +19,13 @@ import ProfessionalSignup from "./routes/professionalsignup";
 import Login from "./routes/login";
 import Search from "./routes/search";
 import Results from "./routes/results";
-
+import UserPanel from "./routes/userpanel";
+import UserProfile from "./routes/userprofile";
+import UserServices from "./routes/userservices";
+import UserMembership from "./routes/usermembership";
+import UserPaymentinfo from "./routes/userpaymentinfo";
+import UserSupport from "./routes/usersupport";
+import ProfessionalMembership from "./routes/professionalmembership";
 // ----
 // Firebase Setup
 // Import the functions you need from the SDKs you need
@@ -124,12 +130,36 @@ const router = createBrowserRouter([
         element: <ProfessionalSupport />,
       },
       {
+        path: "professionalmembership",
+        element: <ProfessionalMembership />,
+      },
+      {
         path: "search",
         element: <Search></Search>,
       },
       {
         path: "results",
         element: <Results></Results>,
+      },
+      {
+        path: "userprofile",
+        element: <UserProfile/>,
+      },
+      {
+        path: "userservices",
+        element: <UserServices/>,
+      },
+      {
+        path: "usermembership",
+        element: <UserMembership/>,
+      },
+      {
+        path: "userpayment",
+        element: <UserPaymentinfo/>,
+      },
+      {
+        path: "usersupport",
+        element: <UserSupport/>,
       },
     ],
   },

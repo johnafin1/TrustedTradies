@@ -25,6 +25,9 @@ export default function ProfessionalPanel() {
   function handleClickContactSupport() {
     navigate("/professionalsupport");
   }
+  function handleClickManageMembership() {
+    navigate("/professionalmembership");
+  }
 
   const [isActive, setIsActive] = useState(true);
 
@@ -63,7 +66,8 @@ export default function ProfessionalPanel() {
   return (
     <>
       <div className="container my-3 d-flex justify-content-center">
-        <div className="grid-container">
+        <div className="grid-container" style={{gridTemplateColumns: "repeat(7, 1fr)",   display: "grid", gap: "20px"
+}}>
           <div
             className="box"
             onClick={handleClickManageProfile}
@@ -76,7 +80,7 @@ export default function ProfessionalPanel() {
                 src={require("../assets/profileicon.png")}
                 alt="Hero 1"
               />
-              <text className="boxTitle">Manage Profile</text>
+              <text className="boxTitleforpro">Manage Profile</text>
             </div>
           </div>
           <div
@@ -90,7 +94,7 @@ export default function ProfessionalPanel() {
               src={require("../assets/statisticsicon.jpeg")}
               alt="Hero 1"
             />
-            <text className="boxTitle">Statistics</text>
+            <text className="boxTitleforpro">Statistics</text>
           </div>
           <div
             className="box"
@@ -103,7 +107,7 @@ export default function ProfessionalPanel() {
               src={require("../assets/workhistoryicon.png")}
               alt="Hero 1"
             />
-            <text className="boxTitle">Work History</text>
+            <text className="boxTitleforpro">Work History</text>
           </div>
           <div
             className="box"
@@ -116,7 +120,7 @@ export default function ProfessionalPanel() {
               src={require("../assets/reviewsicon.png")}
               alt="Hero 1"
             />
-            <text className="boxTitle">Reviews</text>
+            <text className="boxTitleforpro">Reviews</text>
           </div>
           <div
             className="box"
@@ -129,7 +133,20 @@ export default function ProfessionalPanel() {
               src={require("../assets/inboxicon.jpeg")}
               alt="Hero 1"
             />
-            <text className="boxTitle">Inbox</text>
+            <text className="boxTitleforpro">Inbox</text>
+          </div>
+          <div
+            className="box"
+            onClick={handleClickManageMembership}
+            style={{ cursor: "pointer" }}
+          >
+            <img
+              style={{ borderRadius: "25%" }}
+              width={"50px"}
+              src={require("../assets/managemem.jpeg")}
+              alt="Hero 1"
+            />
+            <text className="boxTitleforpro">Manage Membership</text>
           </div>
           <div
             className="box"
@@ -142,8 +159,9 @@ export default function ProfessionalPanel() {
               src={require("../assets/contactsupporticon.png")}
               alt="Hero 1"
             />
-            <text className="boxTitle">Contact Support</text>
+            <text className="boxTitleforpro">Contact Support</text>
           </div>
+          
         </div>
       </div>
       <div className="container my-4">

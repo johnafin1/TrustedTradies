@@ -1,20 +1,12 @@
-import "./professional.css";
 import React, { useState } from "react";
-import ProfessionalPanel from "./professionalpanel";
+import UserPanel from './userpanel'
 
-/*
-Tasks to do on this page - 
-1) set router to all 6 top div tags - profile, statistics, work history, reviews, inbox, support. 
-2) set functionality to the buttons in manage profile page - change profile info, edit skills, change login creds etc. 
-3) set useState to get real profile data including profile photo and information.
-4) Remove "Become a member" button from the top bar. 
-5) Modify the "Register as professional" button to the professional's name. 
-6) Make a separate component for the first top half of the current page (until the hr) so to reuse it for other 5 routes.
-7) Ask Dan about how are we planning to sync this page with login creds.  
-*/
+export default function UserProfile() {
+    const [isActive, setIsActive] = useState(true);
 
-export default function Professional() {
-
+  const toggleStatus = () => {
+    setIsActive(!isActive);
+  };
   function ButtonWithHover({ label }) {
     const [isHovered, setIsHovered] = useState(false);
 
@@ -44,10 +36,39 @@ export default function Professional() {
     );
   }
 
+    function ButtonWithHover({ label }) {
+        const [isHovered, setIsHovered] = useState(false);
+    
+        const handleMouseEnter = () => {
+          setIsHovered(true);
+        };
+    
+        const handleMouseLeave = () => {
+          setIsHovered(false);
+        };
+    
+        const buttonStyle = {
+          borderColor: "#6699CC",
+          backgroundColor: isHovered ? "#6699CC" : "transparent",
+          color: isHovered ? "white" : "#6699CC",
+        };
+    
+        return (
+          <button
+            className="btn btn-outline-dark"
+            style={buttonStyle}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            {label}
+          </button>
+        );
+      }
   return (
     <>
-      <ProfessionalPanel/>
-      <div className="container my-4">
+    <UserPanel></UserPanel>
+
+    <div className="container my-4">
         <div className="container">
           <div className="row">
             <div className="col">
@@ -73,19 +94,19 @@ export default function Professional() {
             <ButtonWithHover label="Edit Profile Information" />
           </div>
           <div className="col-auto">
-            <ButtonWithHover label="Update Skills" />
+            <ButtonWithHover label="Change Password" />
           </div>
           <div className="col-auto">
-            <ButtonWithHover label="Change Login Info" />
-          </div>
-          <div className="col-auto">
-            <ButtonWithHover label="Career" />
+            <ButtonWithHover label="Service Requests" />
           </div>
           <div className="col-auto">
             <ButtonWithHover label="Reviews" />
           </div>
           <div className="col-auto">
-            <ButtonWithHover label="Support" />
+            <ButtonWithHover label="Contact Support" />
+          </div>
+          <div className="col-auto">
+            <ButtonWithHover label="Manage Subscription" />
           </div>
         </div>
       </div>
@@ -106,9 +127,9 @@ export default function Professional() {
                 Joined: <span style={{ fontWeight: 400 }}>Joined Date</span>
               </p>
               <p className="profile-info">
-                Jobs Completed:{" "}
+                Services Requested:{" "}
                 <span style={{ fontWeight: 400 }}>
-                  Number of Jobs Completed
+                  Number of Jobs requested
                 </span>
               </p>
               <p className="profile-info">
@@ -124,30 +145,37 @@ export default function Professional() {
               <p className="profile-info">
                 Languages: <span style={{ fontWeight: 400 }}>Languages</span>
               </p>
-              <p className="profile-info">
-                Rating: <span style={{ fontWeight: 400 }}>Rating</span>
-              </p>
             </div>
           </div>
           <div className="col-auto" style={{ marginLeft: 50 }}>
-            <div className="skills-section">
-              <p className="profile-info">
-                Skills:{" "}
-                <span style={{ fontWeight: 400 }}>car repair, paint</span>
-              </p>
-              <p className="profile-info">Description:</p>
-              <textarea
-                className="form-control"
-                style={{
-                  backgroundColor: "#ececec",
-                  width: "441px",
-                  height: "186px",
-                }}
-              ></textarea>
-            </div>
-          </div>
+  <div className="container my-4">
+    <div className="row my-2">
+      <div className="col">
+        <h5 className="mb-0">Subscription</h5>
+      </div>
+      <div className="col">
+      <button
+  id="statusButton"
+  className={`btn ${
+    isActive ? "btn-outline-success" : "btn-outline-danger"
+  }`}
+  onClick={toggleStatus}
+  style={{ padding: "8px 30px", fontSize: "14px", borderWidth: "2px" }}
+>
+  {isActive ? "Active" : "Inactive"}
+</button>
+
+        <div style={{ fontSize: "12px" }}>192 days remaining</div>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
       </div>
+
+
+    
     </>
-  );
+  )
 }
