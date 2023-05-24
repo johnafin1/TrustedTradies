@@ -220,6 +220,7 @@ export default function Search() {
                   <Row>
                     <Col md={6}>
                       <img
+                        alt="service img"
                         src="https://www.seocopilot.com.au/wp-content/uploads/marketing-for-tradies-e1560607944811.jpg"
                         style={{ maxHeight: "100%", maxWidth: "100%" }}
                       ></img>
@@ -250,7 +251,7 @@ export default function Search() {
               <Col md={6}></Col>
               <Col md={6} style={{ textAlign: "right" }}>
                 <Button size="lg" onClick={handleGotoResults}>
-                  Check Available Professionals
+                  Seek Available Professionals
                 </Button>
               </Col>
             </Row>

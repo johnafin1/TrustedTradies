@@ -9,17 +9,26 @@ import {
   Image,
 } from "react-bootstrap";
 
-import Professionals from "../plugins/professsionals";
+import Services from "../plugins/services";
 
 export default function Results() {
-  let professionals = Professionals;
+  let services = Services;
+  let randomservices = [];
+  for (let index = 0; index < 25; index++) {
+    const random =
+      services[Math.floor(Math.random() * (services.length - 1 - 0 + 1) + 0)];
+    randomservices.push({
+      label: random.label,
+      img: random.img,
+    });
+  }
 
   return (
     <>
       <Container className="mt-4">
         <Row className="mb-4">
           <Col>
-            <div className="text-title">Available Professionals</div>
+            <div className="text-title">Available Jobs</div>
           </Col>
         </Row>
 
@@ -54,7 +63,7 @@ export default function Results() {
                   </Col>
                 </Row>
               </Col>
-              {professionals.map((el) => (
+              {randomservices.map((el) => (
                 <Col md={12} className="mb-3" key={el.img}>
                   <Row>
                     <Col>
@@ -70,16 +79,21 @@ export default function Results() {
                     </Col>
                     <Col>
                       <div
-                        className="text-title"
+                        className="text-title text-capitalize"
                         style={{ fontSize: "1.5rem" }}
                       >
-                        {el.firstName} {el.lastName}
+                        {el.label}
+                      </div>
+                      <div style={{ fontSize: "0.8rem" }} className="mb-2">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Aliquid, iusto. Temporibus doloremque earum non
+                        ipsa modi fuga natus...
                       </div>
                       <div
                         className="text-title"
                         style={{ fontSize: "1.15rem", fontWeight: "normal" }}
                       >
-                        Jobs Completed: {el.jobsCompleted}
+                        Customer: John Smith
                       </div>
                       <div
                         className="text-title"
@@ -102,12 +116,12 @@ export default function Results() {
                     </Col>
                     <Col className="d-flex flex-column">
                       <Button variant="outline-primary" className="mb-2">
-                        Check Service Review
+                        Check Cusstomer Review
                       </Button>
                       <Button variant="outline-success" className="mb-2">
-                        Est Price: ${el.estimatedPrice}
+                        Est Price: $xx.xx
                       </Button>
-                      <Button>Engage</Button>
+                      <Button>Commit</Button>
                     </Col>
                   </Row>
                   <hr></hr>
@@ -123,11 +137,12 @@ export default function Results() {
               />
               <Card.Body>
                 <Card.Title>
-                  Unlimted callouts with a Trusty Trade Membership
+                  Gaurenteed, reliable income as a Trust Trade Professional
+                  Member
                 </Card.Title>
                 <Card.Text>
                   For just $xx.xx a month, a Trusty Trade Membership provides
-                  affordable access to trades (billed annually).
+                  reliable access to jobs and income
                 </Card.Text>
                 <Button className="mb-2" variant="success">
                   Learn More

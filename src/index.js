@@ -19,6 +19,7 @@ import ProfessionalSignup from "./routes/professionalsignup";
 import Login from "./routes/login";
 import Search from "./routes/search";
 import Results from "./routes/results";
+import ResultsP from "./routes/resultsp";
 
 // ----
 // Firebase Setup
@@ -130,6 +131,10 @@ const router = createBrowserRouter([
       {
         path: "results",
         element: <Results></Results>,
+      },
+      {
+        path: "resultsp",
+        element: <ResultsP></ResultsP>,
       },
     ],
   },
