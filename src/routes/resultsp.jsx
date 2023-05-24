@@ -107,12 +107,6 @@ export default function Results() {
                       >
                         Languages: Eng
                       </div>
-                      <div
-                        className="text-title"
-                        style={{ fontSize: "1.15rem", fontWeight: "normal" }}
-                      >
-                        Rating: {[...Array(el.rating)].map((x, i) => "⭐")}
-                      </div>
                     </Col>
                     <Col className="d-flex flex-column">
                       <Button variant="outline-primary" className="mb-2">
@@ -137,7 +131,7 @@ export default function Results() {
               />
               <Card.Body>
                 <Card.Title>
-                  Gaurenteed, reliable income as a Trust Trade Professional
+                  Gaurenteed, reliable income as a Trusty Trade Professional
                   Member
                 </Card.Title>
                 <Card.Text>

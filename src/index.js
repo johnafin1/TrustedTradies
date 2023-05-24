@@ -145,23 +145,25 @@ const router = createBrowserRouter([
       },
       {
         path: "userprofile",
-        element: <UserProfile/>,
+        element: <UserProfile />,
       },
       {
         path: "userservices",
-        element: <UserServices/>,
+        element: <UserServices />,
       },
       {
         path: "usermembership",
-        element: <UserMembership/>,
+        element: <UserMembership />,
       },
       {
         path: "userpayment",
-        element: <UserPaymentinfo/>,
+        element: <UserPaymentinfo />,
       },
       {
         path: "usersupport",
-        element: <UserSupport/>,
+        element: <UserSupport />,
+      },
+      {
         path: "resultsp",
         element: <ResultsP></ResultsP>,
       },
