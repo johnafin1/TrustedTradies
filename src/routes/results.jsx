@@ -55,7 +55,7 @@ export default function Results() {
                 </Row>
               </Col>
               {professionals.map((el) => (
-                <Col md={12} className="mb-3">
+                <Col md={12} className="mb-3" key={el.img}>
                   <Row>
                     <Col>
                       <Image
