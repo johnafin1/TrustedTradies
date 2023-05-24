@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 // import NavDropdown from "react-bootstrap/NavDropdown";
 import ThemeProvider from "react-bootstrap/ThemeProvider";
 import Button from "react-bootstrap/Button";
+import { NavDropdown } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 // import { ui, uiConfig } from "../index";
@@ -46,6 +47,15 @@ export default function Root() {
               <Nav className="me-auto, justify-content-end">
                 <Nav.Link href="/home">Home</Nav.Link>
                 <Nav.Link href="/login">Login/Signup</Nav.Link>
+                <Nav.Link href="/search">New Service</Nav.Link>
+                <NavDropdown title="My Accoount">
+                  <NavDropdown.Item href="/professionalhome">
+                    User
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/professionalhome">
+                    Professional
+                  </NavDropdown.Item>
+                </NavDropdown>
               </Nav>
               <Button
                 size="sm"

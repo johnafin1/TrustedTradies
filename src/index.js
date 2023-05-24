@@ -8,12 +8,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Root from "./routes/root";
 import Home from "./routes/home";
 import ProfessionalHome from "./routes/professionalhome";
-import Professional from "./routes/professional";
+import ProfessionalProfile from "./routes/professionalprofile";
 import ProfessionalStats from "./routes/professionalstats";
 import ProfessionalHistory from "./routes/professionalhistory";
 import ProfessionalReviews from "./routes/professionalreviews";
 import ProfessionalInbox from "./routes/professionalinbox";
 import ProfessionalSupport from "./routes/professionalsupport";
+import MemberSignup from "./routes/membersignup";
+import ProfessionalSignup from "./routes/professionalsignup";
+import Login from "./routes/login";
+import Search from "./routes/search";
+import Results from "./routes/results";
+
 // ----
 // Firebase Setup
 // Import the functions you need from the SDKs you need
@@ -79,36 +85,55 @@ const router = createBrowserRouter([
       },
       {
         path: "login",
-        element: <ProfessionalHome/>
+        element: <Login></Login>,
       },
       {
-        path: "professional",
-        element: <Professional/>
+        path: "professionalhome",
+        element: <ProfessionalHome />,
+      },
+      {
+        path: "signup/member",
+        element: <MemberSignup></MemberSignup>,
+      },
+      {
+        path: "signup/professional",
+        element: <ProfessionalSignup></ProfessionalSignup>,
+      },
+      {
+        path: "professionalprofile",
+        element: <ProfessionalProfile />,
       },
       {
         path: "professionalstats",
-        element: <ProfessionalStats/>
+        element: <ProfessionalStats />,
       },
       {
         path: "professionalhistory",
-        element: <ProfessionalHistory/>
+        element: <ProfessionalHistory />,
       },
       {
         path: "professionalreviews",
-        element: <ProfessionalReviews/>
+        element: <ProfessionalReviews />,
       },
       {
         path: "professionalinbox",
-        element: <ProfessionalInbox/>
+        element: <ProfessionalInbox />,
       },
       {
         path: "professionalsupport",
-        element: <ProfessionalSupport/>
+        element: <ProfessionalSupport />,
+      },
+      {
+        path: "search",
+        element: <Search></Search>,
+      },
+      {
+        path: "results",
+        element: <Results></Results>,
       },
     ],
   },
 ]);
-
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
