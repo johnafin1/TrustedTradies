@@ -9,6 +9,7 @@ import {
 } from "react-bootstrap";
 import Services from "../plugins/services";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 export default function Search() {
   let services = Services.sort((a, b) => a.label.localeCompare(b.label));
@@ -18,6 +19,13 @@ export default function Search() {
   const handleFilterSet = (e) => {
     setFilter(e.target.value);
   };
+
+  const navigate = useNavigate();
+
+  function handleGotoResults() {
+    navigate("/results");
+  }
+
   if (service == null) {
     return (
       <>
@@ -92,7 +100,13 @@ export default function Search() {
               </Col>
               <Col md={10}>
                 <InputGroup className="mb-4">
-                  <Form.Control disabled readOnly type="text" />
+                  <Form.Control
+                    disabled
+                    readOnly
+                    type="text"
+                    value={service.label}
+                    className="text-capitalize"
+                  />
                 </InputGroup>
               </Col>
             </Row>
@@ -113,6 +127,7 @@ export default function Search() {
                     disabled
                     readOnly
                     type="text"
+                    value={service.description}
                   />
                 </InputGroup>
               </Col>
@@ -234,7 +249,9 @@ export default function Search() {
             <Row>
               <Col md={6}></Col>
               <Col md={6} style={{ textAlign: "right" }}>
-                <Button size="lg">Check Available Professionals</Button>
+                <Button size="lg" onClick={handleGotoResults}>
+                  Check Available Professionals
+                </Button>
               </Col>
             </Row>
           </Form>
