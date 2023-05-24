@@ -26,6 +26,8 @@ import UserMembership from "./routes/usermembership";
 import UserPaymentinfo from "./routes/userpaymentinfo";
 import UserSupport from "./routes/usersupport";
 import ProfessionalMembership from "./routes/professionalmembership";
+import ResultsP from "./routes/resultsp";
+
 // ----
 // Firebase Setup
 // Import the functions you need from the SDKs you need
@@ -160,6 +162,8 @@ const router = createBrowserRouter([
       {
         path: "usersupport",
         element: <UserSupport/>,
+        path: "resultsp",
+        element: <ResultsP></ResultsP>,
       },
     ],
   },

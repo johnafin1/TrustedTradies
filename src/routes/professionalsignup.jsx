@@ -70,6 +70,15 @@ export default function SignUp() {
                   </Form.Group>
                 </Col>
                 <Col md={12}>
+                  <Form.Group className="mb-3" controlId="formBasicText">
+                    <Form.Label>Address</Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="Credit Card Number"
+                    />
+                  </Form.Group>
+                </Col>
+                <Col md={12}>
                   <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" placeholder="Password" />

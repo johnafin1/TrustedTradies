@@ -124,4 +124,21 @@ export default [
     description: "Transform your home with a complete renovation",
     img: "https://assets.entrepreneur.com/content/3x2/2000/20170719082927-image4.jpeg",
   },
+  {
+    label: "tree removal",
+    description:
+      "Restore the beauty of your landscape by safely removing unwanted trees",
+    img: "https://timberworksva.com/wp-content/uploads/2019/06/2.-Tree-removal-3-e1561686697970-1080x675.jpg",
+  },
+  {
+    label: "oven repair",
+    description:
+      "Get your kitchen back in full working order with our reliable oven repair services",
+    img: "https://www.hiltonappliancerepairs.com.au/wp-content/uploads/2020/11/oven-repair.jpg",
+  },
+  {
+    label: "solar panel installation",
+    description: "Harness the power of the Australian sun with rooftop solar",
+    img: "https://ibreeze.com.au/wp-content/uploads/2022/10/Direction-Of-Solar-Panel-Australia.jpg",
+  },
 ];
