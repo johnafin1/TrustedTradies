@@ -38,7 +38,7 @@ jobs:
 
     steps:
       - name: Deploy to Firebase Hosting
-        uses: w9jds/firebase-action@v1
+        uses: snakey420/firebase-action@v1
         with:
           args: deploy --only hosting:staging
 
@@ -50,7 +50,7 @@ jobs:
 
     steps:
       - name: Deploy to Firebase Hosting
-        uses: w9jds/firebase-action@v1
+        uses: snakey420/firebase-action@v1
         with:
           args: deploy --only hosting:production
 
@@ -62,7 +62,7 @@ jobs:
 
     steps:
       - name: Set up Environment
-        uses: jakejarvis/wait-action@v1
+        uses: snakey420/wait-action@v1
         with:
           time: '30s'
 
